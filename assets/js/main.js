@@ -119,6 +119,7 @@
   });
   setCmp(50);
 
+  if ($('#board')) {
   /* ---------- interactive offers board ---------- */
   const offers = [
     { s: 'active', u: 'ends', brand: 'Nykaa', name: 'Buy 2 Get 1 on lip kits', sold: '5.2k sold', dur: '01 Nov – 15 Nov', type: 'BOGO', src: 'Magento', stock: ['ok', '132 units'] },
@@ -159,6 +160,7 @@
   $('#search').addEventListener('input', (e) => { state.text = e.target.value; renderBoard(); });
   $('#notesOn').addEventListener('change', (e) => $('#board').classList.toggle('notes', e.target.checked));
   renderBoard();
+  }
 
   /* ---------- exchange stepper ---------- */
   const steps = [

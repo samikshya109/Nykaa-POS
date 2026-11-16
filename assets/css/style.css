@@ -437,3 +437,17 @@ table.offers{width:100%;border-collapse:collapse;border:1px solid var(--p-line);
 .hi-grid div:nth-child(even){border-left:1px solid rgba(255,255,255,.12);padding-left:20px}
 .hi-grid b{font-size:clamp(28px,2.6vw,38px)}
 .hi-grid span{font-size:14px}
+
+/* real figma prototype */
+.proto{display:grid;grid-template-columns:1.75fr 1fr;gap:36px;align-items:center}
+.proto>*{min-width:0}
+.proto-laptop{width:auto}
+.proto-frame{position:relative;aspect-ratio:1452/850;border-radius:3px;overflow:hidden;background:#fff url(../img/offers-final.webp) center/cover no-repeat}
+.proto-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent}
+.proto-guide{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.proto-guide h3{margin:12px 0 10px}
+.proto-guide ol{margin:0 0 18px;padding-left:20px;display:grid;gap:8px;color:var(--body)}
+.proto-guide b{color:var(--ink)}
+.proto-guide .btn{display:inline-block;text-decoration:none}
+.proto-note{color:var(--mute);font-size:13px;margin:12px 0 0}
+@media (max-width:1000px){.proto{grid-template-columns:1fr}}

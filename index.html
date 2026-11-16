@@ -165,35 +165,30 @@
 <section class="wrap section" id="board-sec">
   <p class="eyebrow">Final design · try it</p>
   <h2>A live offer board inside the POS, where associates already work</h2>
-  <p class="sub">Try it: switch between running, upcoming and finished offers, filter, search, and turn on the design notes to see why each part is there.</p>
-  <div class="pos" id="board">
-    <aside class="rail">
-      <div class="rail-i">☰</div>
-      <div class="rail-i on"><i>▤</i>Sales</div>
-      <div class="rail-i"><i>↩</i>Return / Exchange</div>
-      <div class="rail-i"><i>▭</i>Gift Card</div>
-      <div class="rail-logo">NYKAA POS</div>
-    </aside>
-    <div class="pos-main">
-      <div class="pos-head"><h4>Sales</h4><span>⌖ Ambience Gurgaon</span></div>
-      <div class="pos-tabs"><span>In Store Sale</span><span>Endless Aisle</span><span>Manual Sale</span><span>On Hold Sale (0)</span><span class="on">Offers &amp; Discounts</span></div>
-      <div class="pos-bar">
-        <div class="status-tabs" id="statusTabs" data-n="1"></div>
-        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search for brands / offers" aria-label="Search offers"></label>
+  <p class="sub">This is the actual Figma prototype from the project. Click through it right here.</p>
+  <div class="proto">
+    <div class="laptop proto-laptop">
+      <div class="laptop-screen"><span class="cam"></span>
+        <div class="proto-frame">
+          <iframe title="Nykaa POS Offers &amp; Discounts — interactive Figma prototype" loading="lazy" allowfullscreen
+            src="https://embed.figma.com/proto/4wrzN6zi6EboHwippx7zyQ/Nykaa-Enterprise?node-id=5-15570&amp;starting-point-node-id=5%3A15570&amp;page-id=0%3A1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;hide-ui=1&amp;embed-host=share"></iframe>
+        </div>
       </div>
-      <div class="pos-bar">
-        <div class="quick"><b>Quick Filters</b><span id="quick"></span></div>
-        <label class="note-toggle"><input type="checkbox" id="notesOn"> Design notes</label>
-      </div>
-      <div class="table-wrap">
-        <table class="offers">
-          <thead><tr><th data-n="2">Status</th><th>Brand</th><th>Offer</th><th>Duration</th><th>Type</th><th data-n="3">Source</th><th data-n="4">Stock</th><th></th></tr></thead>
-          <tbody id="rows"></tbody>
-        </table>
-        <p class="empty" id="empty" hidden>No offers match. Try another filter.</p>
-      </div>
-      <ol class="legend" id="legend"><li><b>Status tabs with counts</b> The overview comes before the table.</li><li><b>Urgency pills</b> "Ends today" sets expectations before billing.</li><li><b>Source of truth</b> Magento, NRM or Catalog ends the "which system?" debate.</li><li><b>Stock beside the offer</b> No more promising what can't ship.</li></ol>
+      <div class="laptop-base"><span></span></div>
     </div>
+    <aside class="proto-guide">
+      <span class="chip">Live Figma prototype</span>
+      <h3>Things to try</h3>
+      <ol>
+        <li><b>Switch status tabs:</b> Active, Upcoming and Expired, each with its own view.</li>
+        <li><b>Filter by offer type:</b> apply the BOGO quick filter, then use the Type filter.</li>
+        <li><b>Open a row's ⋮ menu:</b> View details, Deactivate, Edit, Restock, Share, Delete.</li>
+        <li><b>Check stock and details:</b> open an offer's SKU details from the table.</li>
+        <li><b>Watch the badges:</b> "Ends today" and "New" update on their own.</li>
+      </ol>
+      <a class="btn" href="https://www.figma.com/proto/4wrzN6zi6EboHwippx7zyQ/Nykaa-Enterprise?node-id=5-12596&amp;starting-point-node-id=5%3A15570&amp;page-id=0%3A1&amp;scaling=min-zoom&amp;content-scaling=fixed" target="_blank" rel="noopener">Open full screen in Figma ↗</a>
+      <p class="proto-note">Tip: click anywhere on the screen to see which areas are clickable.</p>
+    </aside>
   </div>
   <div class="thumbs">
     <figure><img class="zoomable" src="assets/img/offers-upcoming.webp" alt="Upcoming offers state"><figcaption><b>Upcoming</b> Lets BMs and associates prepare before go-live.</figcaption></figure>
