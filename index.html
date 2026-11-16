@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One source of truth at the store counter · Nykaa Retail POS case study</title>
+<meta name="description" content="UX case study: redesigning how Nykaa store associates see live offers, stock, exchanges and auto-replenishment inside the retail POS.">
+<meta property="og:title" content="One source of truth at the store counter">
+<meta property="og:description" content="Nykaa Retail POS case study: offers, exchanges and auto-replenishment for frontline retail teams.">
+<meta property="og:image" content="assets/img/offers-final.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<div class="topbar"><div class="topbar-in"><a class="back" href="https://www.samikshadesigns.com" aria-label="Back to portfolio home">← Back to portfolio</a><a class="site" href="https://www.samikshadesigns.com">samikshadesigns.com</a></div></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><span class="dot"></span>Nykaa Retail POS</a>
+  <nav class="links" id="navlinks">
+    <a href="#problem">Problem</a>
+    <a href="#discovery">Discovery</a>
+    <a href="#offers">Offers</a>
+    <a href="#exchange">Exchange</a>
+    <a href="#ars">Replenishment</a>
+    <a href="#concepts">Concepts</a>
+    <a href="#automation">Automation</a>
+    <a href="#impact">Impact</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Open sections menu">☰</button>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Case study · Nykaa Retail POS · Enterprise UX</p>
+      <h1>One source of truth at the store counter</h1>
+      <p class="lead">How I redesigned the way Nykaa store associates see live offers, stock and exchanges, and how head office drives auto-replenishment. The goal: decisions made in Magento, NRM, catalog and OMS hold up on the store floor.</p>
+      <div class="hero-impact" aria-label="Impact">
+        <span class="hi-label">Impact after launch</span>
+        <div class="hi-grid">
+          <div><b>−25%</b><span>transaction errors</span></div>
+          <div><b>1,500+</b><span>hours saved / year</span></div>
+          <div><b>91→96%</b><span>user satisfaction</span></div>
+          <div><b>1,000+</b><span>retail operators</span></div>
+        </div>
+      </div>
+      <div class="tags">
+        <span>Frontline workflows</span><span>Real-time inventory</span><span>Retail store ops</span><span>Enterprise SaaS</span><span>Systems thinking</span>
+      </div>
+      <div class="hero-meta">
+        <div><b>Role</b>UX Designer</div>
+        <div><b>Team</b>2 PMs · 4 Eng · QA · Staff Designer</div>
+        <div><b>Timeline</b>2 months (Offers) + parallel tracks</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="laptop">
+        <div class="laptop-screen"><span class="cam"></span><img class="zoomable" src="assets/img/offers-final.webp" width="1440" height="814" alt="Offers &amp; Discounts screen in Nykaa POS, shown on a laptop"></div>
+        <div class="laptop-base"><span></span></div>
+      </div>
+      <div class="phone hero-phone">
+        <div class="phone-screen"><img class="zoomable" src="assets/img/screen-scan-hero.webp" width="360" height="675" alt="Mobile concept: scan a product to see live offers and stock"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLANCE -->
+<section class="wrap section" id="glance">
+  <p class="eyebrow">At a glance</p>
+  <h2>Three store workflows, one root problem</h2>
+  <div class="cards3">
+    <a class="ws" href="#offers"><span class="chip">Workstream A</span><h3>Offers &amp; Discounts</h3><p>One screen in the billing app that shows every discount, whether it's on right now, and how much stock is left.</p><span class="go">Explore →</span></a>
+    <a class="ws" href="#exchange"><span class="chip">Workstream B</span><h3>Exchange</h3><p>A simple way to swap an item for another size or shade, instead of refunding it and selling the new one separately.</p><span class="go">Explore →</span></a>
+    <a class="ws" href="#ars"><span class="chip">Workstream C</span><h3>Restocking (ARS)</h3><p>A clearer way for head office to upload the file that decides how much stock each store gets, and to see if it worked.</p><span class="go">Explore →</span></a>
+  </div>
+  <div class="why">
+    <span>The common thread</span>
+    <p>Frontline teams were making decisions on information that lived in other systems. Each workstream brings that information into the tool they already use, at the moment they need it.</p>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="band" id="problem">
+  <div class="wrap section">
+    <p class="eyebrow">The problem</p>
+    <h2>Store associates were the last line of defence for decisions made in systems they couldn't see</h2>
+    <div class="stats">
+      <div class="stat"><b data-count="800" data-prefix="~">0</b><p>cart rules go wrong every year: 10–15% of ~5.2k rules</p></div>
+      <div class="stat"><b data-count="1500" data-prefix="~" data-suffix=" hrs">0</b><p>a year on maintaining sheets and back-and-forth with BMs, Ops, POS support and catalog</p></div>
+      <div class="stat"><b data-count="1" data-prefix="~" data-suffix=" lakh">0</b><p>customers a year affected when a promised offer doesn't apply</p></div>
+      <div class="stat"><b data-count="23" data-prefix="₹" data-suffix=" lakh">0</b><p>refunded at beauty stores in Q4 '21: revenue an exchange could have kept</p></div>
+      <div class="stat"><b data-count="2" data-suffix=" flows">0</b><p>for one customer intent: a return plus a brand-new sale just to swap an item</p></div>
+      <div class="stat dark"><p class="big">Offers and exchanges break the same way: the counter doesn't know what the backend knows.</p></div>
+    </div>
+    <p class="source">Sources: internal PRD impact estimates; Q4 '21 store returns data (906 of 3.86 lakh orders had returned items).</p>
+  </div>
+</section>
+
+<!-- DISCOVERY -->
+<section class="wrap section" id="discovery">
+  <p class="eyebrow">Discovery · conflicting inputs</p>
+  <h2>Every team had built its own workaround. Underneath, they all needed the same thing.</h2>
+  <div class="toggle-row">
+    <span>Show</span>
+    <div class="seg" id="discSeg" role="tablist">
+      <button class="on" data-mode="work" role="tab" aria-selected="true">Today's workaround</button>
+      <button data-mode="need" role="tab" aria-selected="false">What they actually need</button>
+    </div>
+  </div>
+  <div class="disc" id="disc"></div>
+  <div class="core"><b>Core problem</b><span>There was no shared, system-backed view of "what is true right now" at the moment of sale.</span></div>
+  <p class="source">Methods: stakeholder interviews with BMs, store managers and the cart rule team · PRD validation · incremental fixes weighed against a revamp · usability testing on hi-fi.</p>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="band" id="pain">
+  <div class="wrap section">
+    <p class="eyebrow">Research synthesis</p>
+    <h2>Six pain points, validated with stakeholders and users</h2>
+    <div class="filter-chips" id="painFilter"></div>
+    <div class="pains" id="pains"></div>
+  </div>
+</section>
+
+<!-- FRAMING -->
+<section class="wrap section" id="framing">
+  <div class="framing">
+    <div class="hmw">
+      <span>How might we</span>
+      <p>give every associate the same real-time truth the backend has, at the exact moment of sale?</p>
+      <small>This let me say no to a prettier G-Sheet, a WhatsApp alerts group and a separate BM-only tool. Each solved one team's problem and left the counter blind.</small>
+    </div>
+    <div class="acc" id="principles"></div>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section class="band" id="offers">
+  <div class="wrap section">
+    <p class="eyebrow">Workstream A · Offers &amp; Discounts</p>
+    <h2>From a cluttered table to a clear one</h2>
+    <div class="plain"><b>In simple words</b><p>Store staff couldn't tell which discounts were running. A customer would ask about an offer, and nobody at the counter knew if it was real. We added one screen to the billing app that lists every offer, shows whether it's on, starting soon or over, and how much stock is left.</p></div>
+    <p class="sub">Drag the handle to compare my first version with the one I improved after feedback.</p>
+    <div class="compare" id="compare">
+      <img src="assets/img/offers-final.webp" alt="V2 refined offers design">
+      <div class="compare-top" id="compareTop"><img src="assets/img/offers-v1.webp" alt="V1 initial offers design"></div>
+      <div class="compare-handle" id="compareHandle" role="slider" tabindex="0" aria-label="Compare V1 and V2" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span>⇆</span></div>
+      <span class="badge l">V1 · Initial</span><span class="badge r">V2 · Refined</span>
+    </div>
+    <div class="two">
+      <ul class="list bad"><li>Status (expiring, new) buried inside table cells</li><li>No hierarchy between active, upcoming and expired</li><li>Filters scattered: a removable chip here, buttons there</li><li>Search disconnected from the filters</li></ul>
+      <ul class="list good"><li>Status tabs with counts give an overview first</li><li>Status pills such as "Ends today" make urgency scannable</li><li>New SOURCE and STOCK columns support operational decisions</li><li>One filter bar, search next to status, actions moved to ⋮</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="board-sec">
+  <p class="eyebrow">Final design · try it</p>
+  <h2>A live offer board inside the POS, where associates already work</h2>
+  <p class="sub">Try it: switch between running, upcoming and finished offers, filter, search, and turn on the design notes to see why each part is there.</p>
+  <div class="pos" id="board">
+    <aside class="rail">
+      <div class="rail-i">☰</div>
+      <div class="rail-i on"><i>▤</i>Sales</div>
+      <div class="rail-i"><i>↩</i>Return / Exchange</div>
+      <div class="rail-i"><i>▭</i>Gift Card</div>
+      <div class="rail-logo">NYKAA POS</div>
+    </aside>
+    <div class="pos-main">
+      <div class="pos-head"><h4>Sales</h4><span>⌖ Ambience Gurgaon</span></div>
+      <div class="pos-tabs"><span>In Store Sale</span><span>Endless Aisle</span><span>Manual Sale</span><span>On Hold Sale (0)</span><span class="on">Offers &amp; Discounts</span></div>
+      <div class="pos-bar">
+        <div class="status-tabs" id="statusTabs" data-n="1"></div>
+        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search for brands / offers" aria-label="Search offers"></label>
+      </div>
+      <div class="pos-bar">
+        <div class="quick"><b>Quick Filters</b><span id="quick"></span></div>
+        <label class="note-toggle"><input type="checkbox" id="notesOn"> Design notes</label>
+      </div>
+      <div class="table-wrap">
+        <table class="offers">
+          <thead><tr><th data-n="2">Status</th><th>Brand</th><th>Offer</th><th>Duration</th><th>Type</th><th data-n="3">Source</th><th data-n="4">Stock</th><th></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p class="empty" id="empty" hidden>No offers match. Try another filter.</p>
+      </div>
+      <ol class="legend" id="legend"><li><b>Status tabs with counts</b> The overview comes before the table.</li><li><b>Urgency pills</b> "Ends today" sets expectations before billing.</li><li><b>Source of truth</b> Magento, NRM or Catalog ends the "which system?" debate.</li><li><b>Stock beside the offer</b> No more promising what can't ship.</li></ol>
+    </div>
+  </div>
+  <div class="thumbs">
+    <figure><img class="zoomable" src="assets/img/offers-upcoming.webp" alt="Upcoming offers state"><figcaption><b>Upcoming</b> Lets BMs and associates prepare before go-live.</figcaption></figure>
+    <figure><img class="zoomable" src="assets/img/offers-expired.webp" alt="Expired offers state"><figcaption><b>Expired</b> An audit trail that settles "but it was on last week".</figcaption></figure>
+    <figure><img class="zoomable" src="assets/img/before-sheets.webp" alt="Before: G-Sheets and admin tools"><figcaption><b>Before</b> Offer truth lived in G-Sheets and admin tools.</figcaption></figure>
+  </div>
+</section>
+
+<!-- EXCHANGE -->
+<section class="band" id="exchange">
+  <div class="wrap section">
+    <p class="eyebrow">Workstream B · Exchange flow</p>
+    <h2>Swapping an item, in one simple flow</h2>
+    <div class="plain"><b>In simple words</b><p>If a customer wanted a different size or shade, staff had to refund the item and then ring up the new one: two separate jobs, and often a lost sale. Now they can swap it in one go. The screen only shows items that are actually in the store, and it handles the tricky cases, like when nothing is in stock.</p></div>
+    <p class="sub">Click a step, or use the arrow keys, to walk through it.</p>
+    <div class="stepper" id="stepper"></div>
+    <div class="step-view">
+      <div class="laptop"><div class="laptop-screen"><span class="cam"></span><img id="stepImg" class="zoomable" src="assets/img/ex-1.webp" alt=""></div><div class="laptop-base"><span></span></div></div>
+      <div class="step-copy">
+        <span class="chip" id="stepTag">Step 1</span>
+        <h3 id="stepTitle"></h3>
+        <p id="stepBody"></p>
+        <div class="step-api" id="stepApi"></div>
+        <div class="step-nav"><button id="prev" class="btn ghost">← Prev</button><button id="next" class="btn">Next →</button></div>
+      </div>
+    </div>
+    <div class="edge">
+      <div><b>Only one option in stock</b><p>It's picked automatically, but staff still confirm the batch and price.</p></div>
+      <div><b>Nothing in stock</b><p>Staff aren't stuck. They can switch to a refund in the same flow.</p></div>
+      <div><b>Too many items picked</b><p>A short message tells staff the limit, e.g. "You can select 3 only."</p></div>
+      <div><b>Stock stays correct</b><p>The returned item goes back into stock and the new one comes out, automatically.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARS -->
+<section class="wrap section" id="ars">
+  <p class="eyebrow">Workstream C · Auto Replenishment (ARS)</p>
+  <h2>Behind every shelf is a file. If the file is wrong, every store is wrong.</h2>
+  <div class="plain"><b>In simple words</b><p>Head office keeps a spreadsheet that decides which store gets how much stock, and which stores come first. Uploading it used to feel like a guess, because nobody could tell if it had worked. Now the screen shows each step and says clearly whether the file went through, or what went wrong so you can fix it.</p></div>
+  <p class="sub">Try it: pick a file type, upload, and switch between a good file and a broken one.</p>
+  <div class="admin">
+    <aside class="rail">
+      <div class="rail-i">☰</div>
+      <div class="rail-i on"><i>▤</i>Master</div>
+      <div class="rail-i"><i>⚙</i>Settings</div>
+      <div class="rail-i"><i>☺</i>Store Reps</div>
+      <div class="rail-logo">NYKAA POS</div>
+    </aside>
+    <div class="admin-main">
+      <h4>Master</h4>
+      <div class="admin-tabs"><span class="on">Upload</span><span>Download</span></div>
+      <div class="sim">
+        <ol class="sim-steps" id="simSteps"><li>Initiate</li><li>Uploaded</li><li>Processed</li></ol>
+        <div class="sim-body" id="simBody"></div>
+      </div>
+    </div>
+  </div>
+  <div class="sim-outcome">
+    <span>Simulate outcome:</span>
+    <div class="seg" id="outcomeSeg"><button class="on" data-o="ok">Valid file</button><button data-o="err">Format error</button></div>
+  </div>
+  <div class="gallery" id="arsGallery"></div>
+</section>
+
+<!-- CONCEPTS -->
+<section class="band" id="concepts">
+  <div class="wrap section">
+    <p class="eyebrow">Concepts · beyond the brief</p>
+    <h2>Taking it to the associate's hand, and the manager's tablet</h2>
+    <p class="sub">Store work increasingly happens on a phone on the floor and a tablet in the manager's hand. These concepts carry the same model into mobile, AI-assisted workflows, in Nykaa POS styling. <em>Concept, not shipped. Illustrative data.</em></p>
+    <div class="seg big" id="conceptSeg">
+      <button class="on" data-c="floor">Offers &amp; exchange</button>
+      <button data-c="rep">Replenishment on the floor</button>
+      <button data-c="console">Replenishment console</button>
+      <button data-c="tablet">Store manager tablet</button>
+    </div>
+    <div class="concept" id="concept"></div>
+  </div>
+</section>
+
+<!-- AUTOMATION -->
+<section class="wrap section" id="automation">
+  <p class="eyebrow">Suggested automations</p>
+  <h2>Five flows that run themselves, with a human only where judgment matters</h2>
+  <div class="auto">
+    <div class="auto-list" id="autoList"></div>
+    <div class="auto-pipe" id="autoPipe">
+      <div class="node" data-k="t"><span>Trigger</span><p></p></div>
+      <div class="arrow">→</div>
+      <div class="node ai" data-k="a"><span>✦ Automated</span><p></p></div>
+      <div class="arrow">→</div>
+      <div class="node human" data-k="h"><span>Human in the loop</span><p></p></div>
+      <div class="arrow">→</div>
+      <div class="node out" data-k="o"><span>Outcome</span><p></p></div>
+      <button class="btn play" id="play">▶ Play flow</button>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="band" id="impact">
+  <div class="wrap section">
+    <p class="eyebrow">Outcomes</p>
+    <h2>What shipped, and what it changed</h2>
+    <div class="results loud">
+      <div><b data-count="1000" data-suffix="+">0</b><span>retail operators on the redesigned POS workflows</span></div>
+      <div><b data-count="25" data-prefix="−" data-suffix="%">0</b><span>transaction errors</span></div>
+      <div><b data-count="1500" data-suffix="+ hrs">0</b><span>operational hours saved every year</span></div>
+      <div><b>91% → <em data-count="96" data-suffix="%">0</em></b><span>user satisfaction</span></div>
+    </div>
+    <div class="impact">
+      <ul class="shipped">
+        <li>Offers &amp; Discounts tab in the POS: status, source and stock in one view</li>
+        <li>Exchange flow with 4 designed edge cases, replacing return + re-sale</li>
+        <li>Proactive change notifications for BMs and Ops</li>
+        <li>ARS master upload and download with a visible state and explicit errors</li>
+        <li>Dev handoff docs, plus metric tracking set up for post-launch</li>
+        <li>Satisfaction among retail operators: 91% → 96%</li>
+      </ul>
+      <div class="metrics">
+        <table>
+          <thead><tr><th>Metric</th><th>Baseline</th><th>Target</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td>Misconfigured cart rules</td><td>~800 / yr</td><td>Sharply fewer, via one source + alerts</td><td><span class="ok">Within −25% errors</span></td></tr>
+            <tr><td>Manual reconciliation effort</td><td>~1,500 hrs / yr</td><td>G-Sheets retired</td><td><span class="ok">1,500+ hrs saved / yr</span></td></tr>
+            <tr><td>Customers hit by offer disputes</td><td>up to ~1L / yr</td><td>Near zero at the counter</td><td><span class="ok">Within −25% errors</span></td></tr>
+            <tr><td>Refunds that could be exchanges</td><td>₹23L in Q4 '21</td><td>Shift returns to exchanges</td><td><span class="ph">No evidence</span></td></tr>
+            <tr><td>Steps to swap an item</td><td>Return + new sale</td><td>One flow</td><td>Shipped</td></tr>
+            <tr><td>Replenishment master updates</td><td>Outcome unclear</td><td>Validated, visible state</td><td>Shipped</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNINGS -->
+<section class="wrap section" id="learn">
+  <p class="eyebrow">Reflection</p>
+  <h2>Trade-offs, learnings, and what I'd build next</h2>
+  <div class="cols3">
+    <div class="col"><span>Trade-offs I made</span>
+      <h4>Incremental fixes before a revamp</h4><p>I tested small fixes first, and only committed engineering to the full view once they fell short.</p>
+      <h4>A tab inside the POS, not a new tool</h4><p>Associates already juggle apps. Going where they work beat a cleaner standalone tool.</p>
+      <h4>A ±X% price guardrail on exchanges</h4><p>Some flexibility given up to protect margin and lot integrity.</p>
+    </div>
+    <div class="col"><span>What I learned</span>
+      <h4>Workarounds are research data</h4><p>Each team's sheet or call pattern showed exactly where the truth was missing.</p>
+      <h4>Status is the interface</h4><p>At the counter, "is it live and in stock?" matters more than any other column.</p>
+      <h4>Design the backend contract too</h4><p>Inventory moves and API sources had to be agreed with OMS before the UI made sense.</p>
+    </div>
+    <div class="col dark"><span>What I'd build next</span>
+      <h4>AI mismatch detection</h4><p>Flag when BM intent and live rules diverge, before a customer finds out.</p>
+      <h4>Offer change → floor task</h4><p>Turn a go-live into a mobile task: re-tag the shelf, move stock to the front.</p>
+      <h4>Live stock in every offer</h4><p>Feed RFID-accurate inventory into offer availability and exchange suggestions.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Nykaa Retail POS · UX case study</p>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden><button aria-label="Close">✕</button><img alt=""></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
