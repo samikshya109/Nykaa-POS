@@ -190,6 +190,40 @@
       <p class="proto-note">Tip: click anywhere on the screen to see which areas are clickable.</p>
     </aside>
   </div>
+  <div class="board-intro">
+    <span class="chip">Design decisions, labelled</span>
+    <h3>The same screen, broken down</h3>
+    <p>An interactive rebuild of the final screen. Switch status, filter and search, then turn on <b>Design notes</b> to see why each part is there.</p>
+  </div>
+  <div class="pos" id="board">
+    <aside class="rail">
+      <div class="rail-i">☰</div>
+      <div class="rail-i on"><i>▤</i>Sales</div>
+      <div class="rail-i"><i>↩</i>Return / Exchange</div>
+      <div class="rail-i"><i>▭</i>Gift Card</div>
+      <div class="rail-logo">NYKAA POS</div>
+    </aside>
+    <div class="pos-main">
+      <div class="pos-head"><h4>Sales</h4><span>⌖ Ambience Gurgaon</span></div>
+      <div class="pos-tabs"><span>In Store Sale</span><span>Endless Aisle</span><span>Manual Sale</span><span>On Hold Sale (0)</span><span class="on">Offers &amp; Discounts</span></div>
+      <div class="pos-bar">
+        <div class="status-tabs" id="statusTabs" data-n="1"></div>
+        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search for brands / offers" aria-label="Search offers"></label>
+      </div>
+      <div class="pos-bar">
+        <div class="quick"><b>Quick Filters</b><span id="quick"></span></div>
+        <label class="note-toggle"><input type="checkbox" id="notesOn"> Design notes</label>
+      </div>
+      <div class="table-wrap">
+        <table class="offers">
+          <thead><tr><th data-n="2">Status</th><th>Brand</th><th>Offer</th><th>Duration</th><th>Type</th><th data-n="3">Source</th><th data-n="4">Stock</th><th></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p class="empty" id="empty" hidden>No offers match. Try another filter.</p>
+      </div>
+      <ol class="legend" id="legend"><li><b>Status tabs with counts</b> The overview comes before the table.</li><li><b>Urgency pills</b> "Ends today" sets expectations before billing.</li><li><b>Source of truth</b> Magento, NRM or Catalog ends the "which system?" debate.</li><li><b>Stock beside the offer</b> No more promising what can't ship.</li></ol>
+    </div>
+  </div>
   <div class="thumbs">
     <figure><img class="zoomable" src="assets/img/offers-upcoming.webp" alt="Upcoming offers state"><figcaption><b>Upcoming</b> Lets BMs and associates prepare before go-live.</figcaption></figure>
     <figure><img class="zoomable" src="assets/img/offers-expired.webp" alt="Expired offers state"><figcaption><b>Expired</b> An audit trail that settles "but it was on last week".</figcaption></figure>

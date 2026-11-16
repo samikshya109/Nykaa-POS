@@ -451,3 +451,7 @@ table.offers{width:100%;border-collapse:collapse;border:1px solid var(--p-line);
 .proto-guide .btn{display:inline-block;text-decoration:none}
 .proto-note{color:var(--mute);font-size:13px;margin:12px 0 0}
 @media (max-width:1000px){.proto{grid-template-columns:1fr}}
+.board-intro{margin:64px 0 20px;max-width:760px}
+.board-intro h3{font-size:28px;margin:12px 0 6px}
+.board-intro p{color:var(--body);margin:0;font-size:17px}
+.board-intro b{color:var(--pink-ink)}
