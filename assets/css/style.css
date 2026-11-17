@@ -458,7 +458,8 @@ table.offers{width:100%;border-collapse:collapse;border:1px solid var(--p-line);
 
 /* portfolio top nav (matches samikshyadesigns.com) */
 .pnav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;background:#FDFDFC;border-bottom:1px solid #F1E4EA;font-family:"Avenir Next","Avenir","Nunito Sans",system-ui,sans-serif;position:relative;z-index:55}
-.pnav-logo{font-family:"Nunito",system-ui,sans-serif;font-weight:900;font-size:30px;line-height:1;letter-spacing:-.04em;color:#4A4A4A;text-decoration:none}
+.pnav-logo{display:inline-flex;align-items:center;line-height:0;text-decoration:none}
+.pnav-logo img{height:30px;width:auto;display:block}
 .pnav-links{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:62px}
 .pnav-links a{color:#6E6E6E;text-decoration:none;font-size:17px;font-weight:400;transition:color .15s}
 .pnav-links a:hover{color:#1F1F1F}
